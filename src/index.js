@@ -14,11 +14,11 @@ module.exports = function longestConsecutiveLength(array) {
 
       while (hashMap.has(j++)) t++;
 
-      if (t > 1 && t > result) {
+      if (t > result) {
         result = t;
       }
     }
   }
-  
-  return result;
+
+  return result > 1 ? result : 0;
 }
